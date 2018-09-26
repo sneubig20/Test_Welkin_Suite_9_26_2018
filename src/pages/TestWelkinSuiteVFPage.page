@@ -8,7 +8,7 @@
 
         <!-- Contact Info -->
         <apex:pageBlockSection title="Contact Info">
-            <apex:outputText>Test Contact Info</apex:outputText>
+            <apex:relatedList list="Contacts" />
         </apex:pageBlockSection>
     </apex:pageBlock>
 </apex:page>
