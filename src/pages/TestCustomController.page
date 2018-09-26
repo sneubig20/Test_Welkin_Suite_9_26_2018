@@ -1,0 +1,21 @@
+<apex:page controller="TestCustomController" tabStyle="Account">
+	<apex:messages ></apex:messages>
+    <apex:pageBlock title="{!account.Name}">  
+        <apex:pageBlockSection >
+            Phone: <apex:outputText value="{!account.Phone}"></apex:outputText>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection >
+            <apex:form style="border: 1px solid black; padding: 2px;">
+                Account Name: <apex:inputField value="{!account.Name}"></apex:inputField>
+                <!--<apex:commandButton action="{!updateAccountName}" value="Save" rerender="block"/>-->
+            </apex:form>
+        </apex:pageBlockSection>
+
+    </apex:pageBlock>
+    
+    <apex:pageBlock rendered="{!IF(account.Name != null, true, false)}">
+ 		<apex:outputField value="{!account.Name}"></apex:outputField>
+    </apex:pageBlock>
+   
+</apex:page>

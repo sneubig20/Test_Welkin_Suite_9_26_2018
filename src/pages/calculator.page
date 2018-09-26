@@ -1,0 +1,68 @@
+<apex:page controller="calculator">
+
+  <apex:form >
+      <!-- Input Values Page Block -->
+      <apex:pageBlock title="Calculator" >
+         
+          <apex:pageBlockSection title="Input User Info" columns="1" id="userInfoBlock">
+              <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="Name Getter" />
+                  <apex:inputText value="{!name}" />
+              </apex:pageBlockSectionItem>
+              
+              <apex:commandButton value="Submit User Info" reRender="resultBlock" />
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Input Calculation" columns="2" id="inputBlock">
+              <!-- X Value Input -->
+              <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="Value of X" />
+                  <apex:inputText value="{!xvalue}" />
+              </apex:pageBlockSectionItem>
+              
+              <!-- Y Value Input -->
+              <apex:pageBlockSectionItem >
+                  <apex:outputLabel value="Value of Y" />
+                  <apex:inputText value="{!yvalue}" />
+              </apex:pageBlockSectionItem>
+              
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockButtons location="bottom">
+              <apex:commandButton value="Add" action="{!add}" reRender="resultBlock"/>
+              <apex:commandButton value="Subtract" action="{!subtract}" reRender="resultBlock"/>
+              <apex:commandButton value="Multiply" action="{!multiply}" reRender="resultBlock"/>
+              <apex:commandButton value="Reset" action="{!reset}" reRender="inputBlock, resultBlock"/>
+              <apex:commandButton value="Open Page 1" action="{!openPage1}" />
+          </apex:pageBlockButtons>
+     
+      </apex:pageBlock>
+ 
+  <!-- Result Page Block -->
+      <apex:outputPanel id="resultBlock">
+          <apex:pageBlock rendered="{!IF(name != null || result != null, true, false)}">
+              <apex:pageBlockSection title="Output User Info" rendered="{!name != null}">
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel value="Name Setter" />
+                      <apex:outputText value="{!name}" />
+                  </apex:pageBlockSectionItem>
+              </apex:PageBlockSection>
+              
+              <apex:pageBlockSection title="Result" rendered="{!result != null}">
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel value="Result" />
+                      <apex:outputText value="{!result}" />
+                  </apex:pageBlockSectionItem>
+                  
+                  <apex:pageBlockSectionItem >
+                      <apex:outputLabel value="Operation" />
+                      <apex:outputText value="{!operation}" />
+                  </apex:pageBlockSectionItem>
+              </apex:pageBlockSection>
+         </apex:pageBlock>
+     </apex:outputPanel>
+  
+    
+    
+   </apex:form>
+</apex:page>

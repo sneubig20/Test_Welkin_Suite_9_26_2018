@@ -1,0 +1,16 @@
+<apex:page standardController="Account" extensions="TestAccountExtension">
+   
+    <apex:form >
+        Setter Example: <apex:inputText value="{!setterExample}"></apex:inputText>
+        <apex:commandButton action="{!displaySetter}" value="Save" rerender="block"/>
+        <apex:commandButton action="{!clearSetter}" value="Clear" rerender="block"/>
+    </apex:form>
+    
+    <apex:pageBlock >
+    	<apex:pageBlockSection id="block">
+    		<apex:outputText rendered="{!IF(setterExample != null, true, false)}" value="{!setterExample}"></apex:outputText>
+    	</apex:pageBlockSection>
+    </apex:pageBlock>
+    
+
+</apex:page>

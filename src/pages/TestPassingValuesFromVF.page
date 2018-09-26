@@ -1,0 +1,14 @@
+<apex:page controller="TestPassingValuesFromVF" action="{!autoRun}">
+    <apex:pageBlock >
+        <apex:form >
+        	Account Name: <apex:inputField value="{!a.name}"></apex:inputField>
+            <apex:selectList value="{!SelectedValue}">
+                <apex:selectOption value="{!selectOptions}"></apex:selectOption>
+                <apex:actionSupport event="onChange" action="{!checkValue}"/>
+            </apex:selectList>
+            <apex:commandButton value="Save" action="{!debugAccount}"></apex:commandButton>
+
+            <!--<apex:commandButton title="Save" action="{!insertAccount}"></apex:commandButton>-->
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page >
+    <apex:pageBlock title="Page 1">
+    
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,22 @@
+<apex:page standardController="Account" extensions="AccountWizardExtension">
+    <apex:form >
+        <apex:pageBlock title="Account Wizard">
+            <apex:pageBlockSection >
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Account Name" />
+                    <apex:inputField value="{!Account.Name}" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:inputField value="{!Account.SLA__c}" required="true"/>
+                
+                <apex:inputField value="{!Account.Phone}" />
+                
+                <apex:inputField value="{!Account.OwnerId}" />
+                
+                <apex:commandButton value="Save" action="{!createOpportunity}" /> 
+                    
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

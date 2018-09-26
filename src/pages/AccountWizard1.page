@@ -1,0 +1,12 @@
+<apex:page controller="AccountWizardController">
+    <apex:sectionHeader title="New Account" subtitle="Step 1 of 3" />
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Create Account">
+                <apex:inputField value="{!acct.Name}" />
+                <apex:inputField value="{!acct.SLA__c}" />
+                <apex:commandButton value="Next" action="{!step1}" styleClass="btn" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

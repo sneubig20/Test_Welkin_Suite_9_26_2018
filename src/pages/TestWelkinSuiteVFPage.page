@@ -1,0 +1,4 @@
+<apex:page standardController="Account">
+        <apex:outputText >Welcome to my Page</apex:outputText>
+        <apex:outputLabel >Description Label</apex:outputLabel>
+</apex:page>

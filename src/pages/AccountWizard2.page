@@ -1,0 +1,14 @@
+<apex:page controller="AccountWizardController">
+    <apex:sectionHeader title="Create Account Opportunity" subtitle="Step 2 of 3" />
+    
+    <apex:form >
+    	<apex:pageBlock >
+        	<apex:pageBlockSection >
+                <apex:inputField value="{!opp.Name}" />
+                <apex:inputField value="{!opp.CloseDate}" />
+                <apex:inputField value="{!opp.StageName}" />
+                <apex:commandButton value="Next" action="{!step2}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
