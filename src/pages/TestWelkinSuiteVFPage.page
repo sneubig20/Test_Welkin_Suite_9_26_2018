@@ -7,7 +7,7 @@
         </apex:pageBlockSection>
 
         <!-- Contact Info -->
-        <apex:pageBlockSection title="Contact Info">
+        <apex:pageBlockSection title="Contact Info" columns="1">
             <apex:relatedList list="Contacts" />
         </apex:pageBlockSection>
     </apex:pageBlock>
