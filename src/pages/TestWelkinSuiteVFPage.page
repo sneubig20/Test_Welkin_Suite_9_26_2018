@@ -1,4 +1,4 @@
-<apex:page standardController="Account" extensions="AccountContactExtension">
+<apex:page standardController="Account">>
     <apex:pageBlock>
         <!-- Account Details -->
         <apex:pageBlockSection title="Account Details">
@@ -11,6 +11,5 @@
             <apex:relatedList list="Contacts" />
         </apex:pageBlockSection>
 
-        <apex:outputText value="{!outputMonthString}" />
     </apex:pageBlock>
 </apex:page>
