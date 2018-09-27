@@ -18,6 +18,64 @@
   <ItemGroup>
     <Folder Include="AnonymousApex" />
     <Folder Include="Soql" />
+    <Folder Include="aura\" />
+    <Folder Include="aura\Bot\" />
+    <Folder Include="aura\DaysOnMarketEstimator\" />
+    <Folder Include="aura\EinsteinVision\" />
+    <Folder Include="aura\EinsteinVisionCard\" />
+    <Folder Include="aura\EinsteinVisionDashboard\" />
+    <Folder Include="aura\EinsteinVisionDataset\" />
+    <Folder Include="aura\EinsteinVisionDatasetEvent\" />
+    <Folder Include="aura\EinsteinVisionEvent\" />
+    <Folder Include="aura\FormattedDate\" />
+    <Folder Include="aura\Map\" />
+    <Folder Include="aura\MapCard\" />
+    <Folder Include="aura\MortgageAmortizationChart\" />
+    <Folder Include="aura\MortgageCalculator\" />
+    <Folder Include="aura\MortgageCalculatorCard\" />
+    <Folder Include="aura\MortgageChange\" />
+    <Folder Include="aura\PictureCarousel\" />
+    <Folder Include="aura\PictureGalleryCard\" />
+    <Folder Include="aura\PriceRange\" />
+    <Folder Include="aura\PropertyDaysOnMarketChart\" />
+    <Folder Include="aura\PropertyListDaysOnMarketChart\" />
+    <Folder Include="aura\PropertyPageChange\" />
+    <Folder Include="aura\PropertyPaginator\" />
+    <Folder Include="aura\PropertySummary\" />
+    <Folder Include="aura\PropertyTile\" />
+    <Folder Include="aura\PropertyTileList\" />
+    <Folder Include="aura\RangeChange\" />
+    <Folder Include="aura\SimilarProperties\" />
+    <Folder Include="aura\SmartHome\" />
+    <Folder Include="aura\SmartHomeCard\" />
+    <Folder Include="aura\SmartLights\" />
+    <Folder Include="aura\SmartLocks\" />
+    <Folder Include="aura\SmartPriceCalculator\" />
+    <Folder Include="aura\SmartThermostat\" />
+    <Folder Include="classes\" />
+    <Folder Include="pages\" />
+    <Folder Include="triggers\" />
+    <Folder Include="objects\" />
+    <Folder Include="staticresources\" />
+    <Folder Include="staticresources\jQueryMobile\" />
+    <Folder Include="staticresources\jQueryMobile\jquery.mobile-1.4.5\" />
+    <Folder Include="staticresources\jQueryMobile\jquery.mobile-1.4.5\images\" />
+    <Folder Include="staticresources\jQueryMobile\jquery.mobile-1.4.5\images\icons-png\" />
+    <Folder Include="staticresources\jQueryMobile\jquery.mobile-1.4.5\images\icons-svg\" />
+    <Folder Include="staticresources\jQueryMobile\__MACOSX\" />
+    <Folder Include="staticresources\jQueryMobile\__MACOSX\jquery.mobile-1.4.5\" />
+    <Folder Include="staticresources\jQueryMobile\__MACOSX\jquery.mobile-1.4.5\images\" />
+    <Folder Include="staticresources\jQueryMobile\__MACOSX\jquery.mobile-1.4.5\images\icons-png\" />
+    <Folder Include="staticresources\jQueryMobile\__MACOSX\jquery.mobile-1.4.5\images\icons-svg\" />
+    <Folder Include="staticresources\leaflet\" />
+    <Folder Include="staticresources\leaflet\images\" />
+    <Folder Include="staticresources\leaflet1\" />
+    <Folder Include="staticresources\leaflet1\images\" />
+    <Folder Include="staticresources\nouislider\" />
+    <Folder Include="staticresources\vfimagetest\" />
+    <Folder Include="staticresources\vfimagetest\cats\" />
+    <Folder Include="staticresources\vfimagetest\__MACOSX\" />
+    <Folder Include="staticresources\vfimagetest\__MACOSX\cats\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="aura/Bot/Bot.cmp">
@@ -1313,6 +1371,11 @@
     <Compile Include="triggers/SendConfirmationEmail.trigger">
       <PhysicalRelativePath>src/triggers/SendConfirmationEmail.trigger</PhysicalRelativePath>
       <SubType>Trigger</SubType>
+    </Compile>
+    <Compile Include="classes/AccountContactExtension.cls">
+      <MetadataType>ApexClass</MetadataType>
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src/classes/AccountContactExtension.cls</PhysicalRelativePath>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -5126,6 +5189,12 @@
       <SubType>Metadata</SubType>
       <PackageName />
       <DependentUpon>triggers/SendConfirmationEmail.trigger</DependentUpon>
+    </None>
+    <None Include="classes/AccountContactExtension.cls-meta.xml">
+      <MetadataType>Metadata</MetadataType>
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src/classes/AccountContactExtension.cls-meta.xml</PhysicalRelativePath>
+      <DependentUpon>classes/AccountContactExtension.cls</DependentUpon>
     </None>
   </ItemGroup>
 </Project>
